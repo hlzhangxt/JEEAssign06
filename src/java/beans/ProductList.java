@@ -188,6 +188,7 @@ public class ProductList {
                 ResultSet rs = pstmt.getGeneratedKeys();
                 if (rs.next()) {
                     int productid = rs.getInt(1);
+                    p.setProductID(productid);
                     productList.put(productid, p);
 
                 }
